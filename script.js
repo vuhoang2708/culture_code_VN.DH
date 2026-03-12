@@ -52,15 +52,6 @@ const topics = [
 // Render topics
 const list = document.getElementById('topicsList');
 topics.forEach(t => {
-  // Thêm nhãn "Nội dung chi tiết" trước mục "3 đòn bẩy hạnh phúc"
-  if (t.name === "3 đòn bẩy hạnh phúc") {
-    const subHeader = document.createElement('h3');
-    subHeader.className = 'topics-subheader';
-    subHeader.innerText = "Nội dung chi tiết";
-    subHeader.style.cssText = "grid-column: 1/-1; margin: 2rem 0 1rem; color: var(--warm-yellow); font-size: 1.4rem; border-left: 4px solid var(--warm-yellow); padding-left: 15px;";
-    list.appendChild(subHeader);
-  }
-
   const item = document.createElement('div');
   item.className = 'topic-item';
   item.innerHTML = `
