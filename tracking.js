@@ -1,5 +1,5 @@
 // tracking.js - Hệ thống Analytics hợp nhất cho Dự án DH4HN
-const SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyRRFyQvKrjmnNlyAb6ryGgvFHJrqtnGkT8thbAzhWmN5OwWFQghj5Lis_M0BW0Kjbh/exec";
+const SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzzAAAMuugYQMRNZqYq9ZsZD6qvDgXCAre1D1RQ34V1Ytl5gfMqtBKw7-LIPQs4pFGZ/exec";
 const sessionId = 'dh-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5);
 
 window.sessionId = sessionId; // Export cho quiz.js dùng chung
