@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập LMS - Culture Code</title>
+    <title>Đăng nhập LMS - CultureCode</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;800&display=swap"
@@ -147,38 +147,25 @@
     <div class="login-card">
         <img src="data/logo.jpg" alt="Logo" class="logo" style="border-radius: 12px;">
         <h1>Hệ thống LMS</h1>
-        <p class="subtitle">Truy cập Thư viện kiến thức Culture Code</p>
+        <p class="subtitle">Truy cập Thư viện kiến thức CultureCode</p>
 
         <div class="input-group">
             <label>Tên đăng nhập</label>
-            <input type="text" id="username" placeholder="Nhập email hoặc username">
+            <input type="text" placeholder="Nhập email hoặc username">
         </div>
 
         <div class="input-group">
             <label>Mật khẩu</label>
-            <input type="password" id="password" placeholder="••••••••">
+            <input type="password" placeholder="••••••••">
         </div>
 
-        <button class="btn-login" id="loginBtn">Đăng nhập</button>
+        <button class="btn-login">Đăng nhập</button>
 
         <div class="status-badge">🏗️ Đang xây dựng</div>
 
         <a href="index.html" class="back-link">← Quay lại trang chủ</a>
     </div>
 
-    <script>
-        document.getElementById('loginBtn').addEventListener('click', function () {
-            const user = document.getElementById('username').value;
-            const pass = document.getElementById('password').value;
-
-            if (user === 'admin' && pass === '12345') {
-                alert('Đăng nhập thành công!');
-                window.location.href = 'lms_dashboard.html';
-            } else {
-                alert('Tên đăng nhập hoặc mật khẩu không đúng!');
-            }
-        });
-    </script>
 </body>
 
 </html>
