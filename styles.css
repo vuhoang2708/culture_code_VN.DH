@@ -7,16 +7,24 @@
 }
 
 :root {
+  --accent: #f59e0b;       /* DH Warm Yellow */
+  --accent-secondary: #92400e; /* Muted Burnt Amber */
   --warm-yellow: #f59e0b;
-  --warm-orange: #ea580c;
-  --warm-light: #fef3c7;
-  --warm-cream: #fffbeb;
-  --dark: #1c1917;
-  --mid: #44403c;
-  --light-text: #78716c;
+  --warm-orange: #92400e;
+  --dark: #1c1917;         /* DH Stone Dark */
+  --mid: #292524;          /* Stone Middle */
+  --light-text: #a8a29e;   /* Soft warm text */
   --white: #ffffff;
-  --radius: 16px;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --glass: rgba(28, 25, 23, 0.8);
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 24px;
+  --shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes glowDashboard {
+  0% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.4); border-color: rgba(245, 158, 11, 0.6); transform: translateY(-2px); }
+  100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); }
 }
 
 html {
@@ -25,15 +33,16 @@ html {
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
-  background: var(--warm-cream);
-  color: var(--dark);
+  background: var(--dark);
+  color: #fafaf9;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* ============ HERO ============ */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #3a2c1a 100%);
+  background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #3a2c2a 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,9 +56,9 @@ body {
 .hero::before {
   content: '';
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 75%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -122,18 +131,19 @@ body {
 /* ============ SECTIONS ============ */
 .section {
   padding: 5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .section.overview {
-  background: var(--warm-cream);
+  background: var(--dark);
 }
 
 .section.topics {
-  background: var(--warm-light);
+  background: #1e1b19; /* Slightly different dark */
 }
 
 .section.habits {
-  background: var(--white);
+  background: var(--dark);
 }
 
 .container {
@@ -144,7 +154,7 @@ body {
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
-  color: var(--dark);
+  color: var(--white);
   text-align: center;
   margin-bottom: 0.5rem;
 }
@@ -164,15 +174,18 @@ body {
 }
 
 .card {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
   border-radius: var(--radius);
   padding: 1.6rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
 }
 
 .card-icon {
@@ -184,12 +197,52 @@ body {
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--dark);
+  color: var(--white);
 }
 
 .card p {
   font-size: 0.9rem;
-  color: var(--mid);
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* ============ DASHBOARD CARD ============ */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  animation: glowDashboard 4s infinite ease-in-out;
+  backdrop-filter: blur(12px);
+}
+
+.dashboard-card .badge {
+  background: var(--warm-yellow);
+  color: var(--dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.3rem 1rem;
+  border-radius: 99px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dashboard-card h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card p {
+  color: var(--light-text);
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -202,16 +255,17 @@ body {
 }
 
 .topic-item {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
   cursor: pointer;
-  transition: transform 0.15s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .topic-item:hover {
-  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 
 .topic-header {
@@ -240,6 +294,7 @@ body {
   font-weight: 700;
   font-size: 1rem;
   flex: 1;
+  color: var(--white);
 }
 
 .topic-en {
@@ -311,7 +366,7 @@ body {
 
 .habit-body p {
   font-size: 0.9rem;
-  color: var(--mid);
+  color: var(--light-text);
   margin-bottom: 0.5rem;
 }
 
@@ -329,10 +384,10 @@ body {
 }
 
 .lever-card {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
 }
@@ -354,6 +409,7 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
+  color: var(--white);
 }
 
 .lever-en {
@@ -371,7 +427,7 @@ body {
 
 .lever-card ul li {
   font-size: 0.9rem;
-  color: var(--mid);
+  color: var(--light-text);
   margin-bottom: 0.6rem;
   padding-left: 1.4rem;
   position: relative;
@@ -386,11 +442,12 @@ body {
 }
 
 .lever-habits {
-  background: var(--warm-cream);
+  background: rgba(245, 158, 11, 0.05);
   padding: 0.8rem 1rem;
   border-radius: 8px;
   font-size: 0.85rem;
-  color: var(--dark);
+  color: var(--accent);
+  border: 1px solid rgba(245, 158, 11, 0.1);
 }
 
 .levers-note {

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký DH Masterclass - Culture Code</title>
+    <title>Đăng ký [HCM-CC02] CultureCode 101</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --dark: #0f172a;
-            --mid: #334155;
-            --light: #f8fafc;
-            --accent: #3b82f6;
-            --warm-yellow: #f59e0b;
+            --dark: #1c1917;         /* DH Stone Dark */
+            --mid: #292524;          /* Stone Middle */
+            --light: #fafaf9;
+            --accent: #f59e0b;       /* DH Warm Yellow */
+            --accent-secondary: #92400e; /* Muted Burnt Amber */
             --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.08);
         }
 
         * {
@@ -25,7 +25,7 @@
         }
 
         body {
-            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #3a2c2a 100%);
             color: var(--light);
             min-height: 100vh;
             display: flex;
@@ -41,7 +41,7 @@
             padding: 3rem;
             border-radius: 32px;
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
@@ -51,10 +51,10 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff, var(--warm-yellow));
+            background: linear-gradient(135deg, #fff, var(--accent));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -63,6 +63,8 @@
         .subtitle {
             color: rgba(255, 255, 255, 0.6);
             line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .form-grid {
@@ -100,50 +102,42 @@
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: var(--warm-yellow);
+            border-color: var(--accent);
             background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
         }
 
-        .radio-group {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 5px;
+        option {
+            background: var(--dark);
+            color: white;
         }
 
-        .radio-item {
+        .payment-info {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+
+        .payment-info h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 12px;
-            border-radius: 10px;
-            border: 1px solid var(--glass-border);
-            cursor: pointer;
-            transition: all 0.2s;
+            gap: 0.5rem;
         }
 
-        .radio-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .radio-item input {
-            width: auto;
-            margin-right: 10px;
-        }
-
-        .radio-item label {
-            margin-bottom: 0;
-            cursor: pointer;
-            font-weight: 400;
-            font-size: 0.85rem;
+        .payment-details {
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .btn-submit {
             width: 100%;
             padding: 1.25rem;
-            background: var(--warm-yellow);
-            color: var(--dark);
+            background: var(--accent);
+            color: white;
             border: none;
             border-radius: 16px;
             font-weight: 800;
@@ -151,25 +145,27 @@
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             margin-top: 2rem;
-            box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.5);
         }
 
-        .btn-submit:hover {
+        .btn-submit:hover:not(:disabled) {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px -10px rgba(245, 158, 11, 0.6);
+            box-shadow: 0 15px 40px -10px rgba(16, 185, 129, 0.6);
             filter: brightness(1.1);
         }
 
-        .btn-submit:active {
-            transform: translateY(0);
+        .btn-submit:disabled {
+            background: #475569;
+            cursor: not-allowed;
+            box-shadow: none;
         }
 
         .loading-spinner {
             display: none;
             width: 20px;
             height: 20px;
-            border: 3px solid rgba(0,0,0,0.1);
-            border-top: 3px solid var(--dark);
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top: 3px solid white;
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-right: 10px;
@@ -180,7 +176,7 @@
             100% { transform: rotate(360deg); }
         }
 
-        #successMessage {
+        #successMessage, #fullMessage {
             display: none;
             text-align: center;
             padding: 2rem;
@@ -206,9 +202,6 @@
             .input-group.full-width {
                 grid-column: span 1;
             }
-            .radio-group {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -216,52 +209,156 @@
 
     <div class="form-card" id="formWrapper">
         <div class="header">
-            <h1>Đăng ký DH Masterclass</h1>
-            <p class="subtitle">Kiến tạo văn hóa hạnh phúc bền vững cùng Culture Code.</p>
+            <h1>[HCM-CC02] CultureCode 101</h1>
+            <p class="subtitle">Decode Culture for All. As It Should Be. <br>Vui lòng điền đầy đủ thông tin bên dưới để hoàn tất đăng ký.</p>
         </div>
 
         <form id="crmForm">
+            <!-- Thông tin Thanh toán -->
+            <div class="payment-info">
+                <h3>💰 Chi phí hậu cần: 300.000đ</h3>
+                <div class="payment-details">
+                    <p>Bao gồm: Tài liệu, Ăn trưa, Teabreak.</p>
+                    <p style="margin-top: 10px;"><strong>Tài khoản nhận phí:</strong></p>
+                    <ul style="list-style: none; margin-left: 0; padding-top: 5px;">
+                        <li>🏦 <strong>Ngân hàng BIDV</strong>( cá nhân, không cần xuất hoá đơn đỏ): 12310000494056 - Hà Ngọc Hoàn</li>
+                        <li>🏦 <strong>Ngân hàng MB</strong>( doanh nghiệp,cần xuất hoá đơn đỏ): 1910 - Công ty Cổ phần Tư vấn Quản trị HIPER</li>
+                        <li>✍️ <strong>Nội dung</strong>: CC02 - [Họ tên] - [SĐT]</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="form-grid">
+                <!-- Thông tin cá nhân -->
                 <div class="input-group full-width">
                     <label>Họ và tên *</label>
-                    <input type="text" name="fullName" required placeholder="Nhập họ tên...">
+                    <input type="text" name="fullName" required placeholder="Nhập họ tên đầy đủ...">
                 </div>
+
+                <div class="input-group">
+                    <label>Business Email *</label>
+                    <input type="email" name="email" required placeholder="Email công việc/liên hệ...">
+                </div>
+
                 <div class="input-group">
                     <label>Số điện thoại (Zalo) *</label>
-                    <input type="tel" name="phone" required placeholder="Nhập số điện thoại...">
+                    <input type="tel" name="phone" required placeholder="Để BTC mời vào nhóm lớp...">
                 </div>
+
                 <div class="input-group">
-                    <label>Email liên hệ *</label>
-                    <input type="email" name="email" required placeholder="Nhập địa chỉ email...">
+                    <label>Cơ quan / Tổ chức *</label>
+                    <input type="text" name="organization" required placeholder="Tên đơn vị hiện tại...">
                 </div>
+
                 <div class="input-group">
-                    <label>Tên học viên cũ giới thiệu (nếu có)</label>
-                    <input type="text" name="referrerName" placeholder="Nhập tên học viên cũ...">
+                    <label>Chức danh / Công việc *</label>
+                    <input type="text" name="jobTitle" required placeholder="Vị trí của bạn...">
                 </div>
+
+                <div class="input-group full-width">
+                    <label>Quy mô Tổ chức/Công ty *</label>
+                    <select name="companySize" required>
+                        <option value="">Chọn quy mô...</option>
+                        <option value="<50">Dưới 50 nhân sự</option>
+                        <option value="50-200">Từ 50 - 200 nhân sự</option>
+                        <option value="201-1000">Từ 201 - 1000 nhân sự</option>
+                        <option value=">1000">Trên 1000 nhân sự</option>
+                    </select>
+                </div>
+
+                <!-- Mục tiêu & Kỳ vọng -->
+                <div class="input-group full-width">
+                    <label>Mục đích chính của bạn khi tham gia Masterclass này? *</label>
+                    <select name="purpose" required>
+                        <option value="">Chọn mục đích...</option>
+                        <option value="Thêm kiến thức & công cụ">Cần thêm kiến thức & công cụ để triển khai tại DN</option>
+                        <option value="Kết nối & Chia sẻ">Muốn kết nối & chia sẻ cùng cộng đồng CultureCode</option>
+                        <option value="Học hỏi cá nhân">Học hỏi để phát triển năng lực cá nhân</option>
+                        <option value="Khác">Khác...</option>
+                    </select>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Bạn mong đợi 3 kết quả nào nhất sau buổi học? *</label>
+                    <textarea name="expectations" required rows="3" placeholder="Ghi rõ 3 điều bạn mong chờ..."></textarea>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Câu hỏi dành cho Diễn giả (nếu có)</label>
+                    <textarea name="questions" rows="2" placeholder="BTC sẽ chọn lọc để giải đáp trong chương trình..."></textarea>
+                </div>
+
                 <div class="input-group">
-                    <label>Số ĐT học viên cũ giới thiệu (nếu có)</label>
-                    <input type="tel" name="referrerPhone" placeholder="Nhập số điện thoại...">
+                    <label>Suất ăn trưa của bạn *</label>
+                    <select name="lunchNote" required>
+                        <option value="Mặn">Suất ăn Mặn (Bình thường)</option>
+                        <option value="Chay">Suất ăn Chay</option>
+                    </select>
                 </div>
+
+                <div class="input-group">
+                    <label>Bạn biết đến lớp qua đâu? *</label>
+                    <select name="referralSource" required>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Zalo Group">Zalo Group</option>
+                        <option value="RMIT Community">Cộng đồng RMIT</option>
+                        <option value="Friend">Được bạn bè giới thiệu</option>
+                        <option value="Khác">Khác...</option>
+                    </select>
+                </div>
+
+                <input type="hidden" name="event_id" value="CC101_REG_HCM02">
+                <input type="hidden" name="paymentStatus" value="Pending">
             </div>
 
             <button type="submit" class="btn-submit" id="submitBtn">
                 <span class="loading-spinner"></span>
-                <span class="btn-text">Gửi đăng ký ngay</span>
+                <span class="btn-text">Gửi đăng ký & Hoàn tất</span>
             </button>
 
             <a href="index.html" class="back-home" style="text-align: center;">← Quay về trang chủ</a>
         </form>
 
         <div id="successMessage">
-            <div style="font-size: 4rem; margin-bottom: 1rem;">✨</div>
-            <h2 style="margin-bottom: 1rem; color: var(--warm-yellow);">Đăng ký thành công!</h2>
-            <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Cảm ơn bạn đã quan tâm. Culture Code Team sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+            <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+            <h2 style="margin-bottom: 1rem; color: var(--accent);">Đăng ký thành công!</h2>
+            <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                Cảm ơn bạn đã đăng ký **[HCM-CC02] CultureCode 101**. <br>
+                BTC đã nhận được thông tin và sẽ liên hệ xác nhận qua Zalo/Email sớm nhất.
+            </p>
+            <div class="payment-info" style="margin-top: 2rem; text-align: left;">
+                <p>⚠️ <strong>Lưu ý:</strong> Vui lòng hoàn tất chuyển khoản 300.000đ để giữ chỗ chính thức.</p>
+            </div>
             <a href="index.html" class="btn-submit" style="display: block; text-decoration: none; text-align: center; margin-top: 2rem;"> Quay về trang chủ</a>
+        </div>
+
+        <div id="fullMessage">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">⏳</div>
+            <h2 style="margin-bottom: 1rem; color: #f59e0b;">Lớp đã đủ số lượng!</h2>
+            <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">Hiện tại đợt Masterclass này đã nhận đủ học viên. Vui lòng quay lại sau hoặc liên hệ Fanpage để đăng ký danh sách chờ.</p>
+            <a href="index.html" class="btn-submit" style="display: block; text-decoration: none; text-align: center; margin-top: 2rem; background: #64748b;"> Quay về trang chủ</a>
         </div>
     </div>
 
-    <script src="tracking.js?v=2.3"></script>
+    <script src="tracking.js?v=2.5"></script>
     <script>
+        // Check capacity on load
+        async function checkCapacity() {
+            const SHEET_URL = window.CUSTOM_WEBAPP_URL || "https://script.google.com/macros/s/AKfycbzvt-RTibBnJpH_Z9r5sR1hOnaR6aXVwksSCLsfqIxl1ePRz5wF_-GTrhe2PTWxiufSHg/exec";
+            try {
+                const response = await fetch(SHEET_URL);
+                const result = await response.json();
+                if (result.isFull) {
+                    document.getElementById('crmForm').style.display = 'none';
+                    document.getElementById('fullMessage').style.display = 'block';
+                }
+            } catch (err) {
+                console.warn('Capacity check failed or needs manual config.');
+            }
+        }
+        
+        checkCapacity();
+
         document.getElementById('crmForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
@@ -275,26 +372,24 @@
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
 
-            // Gửi qua GAS Mini-CRM
             try {
-                // Tracking behavior event
                 if (window.logToSheet) {
-                    await window.logToSheet('REGISTER_SUBMIT', data.fullName, {
+                    await window.logToSheet('REGISTER_EVENT_SYNC', data.fullName, {
                         ...data,
-                        type: 'CRM_LEAD'
+                        type: 'EVENT_LEAD_CC02',
+                        source: 'Web_CC101_Official'
                     });
                 }
                 
-                // Show success
                 document.getElementById('crmForm').style.display = 'none';
                 document.querySelector('.header').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
             } catch (err) {
                 console.error(err);
-                alert('Có lỗi xảy ra, vui lòng thử lại sau.');
+                alert('Có lỗi xảy ra, vui lòng gửi lại hoặc liên hệ BTC.');
                 btn.disabled = false;
                 spinner.style.display = 'none';
-                text.innerText = 'Gửi đăng ký';
+                text.innerText = 'Gửi đăng ký & Hoàn tất';
             }
         });
     </script>

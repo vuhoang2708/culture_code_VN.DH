@@ -1,0 +1,8 @@
+{
+  "name": "culturecode101",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/assessment", "destination": "/assessment.html" },
+    { "source": "/register", "destination": "/register.html" }
+  ]
+}

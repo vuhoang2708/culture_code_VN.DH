@@ -1,33 +1,33 @@
 const topics = [
   {
     num: 1,
-    name: "Khoa học hạnh phúc",
-    en: "Science of Happiness",
-    desc: "Nền tảng của khóa học dựa trên các nghiên cứu về tâm lý học tích cực và các yếu tố tạo nên hạnh phúc thực sự và bền vững trong công việc cũng như cuộc sống."
+    name: "Tư duy Hệ thống",
+    en: "System Thinking",
+    desc: "Cốt lõi của văn hóa không nằm ở bề nổi mà nằm ở hệ thống các niềm tin và giả định ngầm định. Học cách nhìn nhận tổ chức như một thực thể sống có mối liên kết chặt chẽ."
   },
   {
     num: 2,
-    name: "3 cấp độ hạnh phúc",
-    en: "3 Levels of Happiness",
-    desc: "Khám phá 3 tầng nấc cảm xúc: Pleasure (Thú vui) -> Passion (Đam mê) -> Higher Purpose (Mục đích cao cả). Hạnh phúc bền vững tỷ lệ thuận với cấp độ sâu sắc của mục đích sống."
+    name: "3 Cấp độ Văn hóa của Edgar Schein",
+    en: "Schein's 3 Levels of Culture",
+    desc: "Khám phá mô hình kinh điển: Đồ tạo tác -> Espoused Values (Giá trị tuyên bố) -> Underlying Assumptions (Giả định ngầm định)."
   },
   {
     num: 3,
-    name: "3 đòn bẩy hạnh phúc",
-    en: "3 Levers of Happiness",
-    desc: "Khám phá Thuyết Tự quyết với 3 đòn bẩy: Cảm giác Tiến bộ (Progress), Cảm giác Tự chủ (Control) và Cảm giác Kết nối (Connection)."
+    name: "5 Biểu hiện quan sát được",
+    en: "5 Observable Expressions",
+    desc: "Cách nhận diện văn hóa qua: Đồ tạo tác, Nghi lễ, Hành vi, Ngôn ngữ và Câu chuyện. Đây là 'bằng chứng' sống động của văn hóa thực tế."
   },
   {
     num: 4,
-    name: "Giá trị cốt lõi",
-    en: "Core Values",
-    desc: "Sự đồng bộ giữa giá trị bản thân, những gì chúng ta thực sự hành động (thay vì chỉ tuyên ngôn) và cách phân bổ tài nguyên Thời gian, Tiền bạc theo chiếc La bàn cuộc đời."
+    name: "4 Đòn bẩy Thực thi",
+    en: "4 Culture Levers",
+    desc: "Tập trung vào 4 nguồn lực chính để thay đổi: Leadership (Lãnh đạo), Engagement (Gắn kết) và Talent (Nhân tài)."
   },
   {
     num: 5,
-    name: "Thói quen hạnh phúc",
-    en: "Happiness Habits",
-    desc: "Bộ 5 thói quen cụ thể giúp kích hoạt 3 đòn bẩy hạnh phúc: Biết ơn, Lạc quan, Vị nhân, Tỉnh thức và Phiêu."
+    name: "Khung Trưởng thành Văn hóa",
+    en: "Maturity Framework",
+    desc: "Đo lường sự thấu cảm và tích hợp thông qua 4 cấp độ: Awareness (Nhận thức) -> Knowledge (Tri thức) -> Action (Hành động) -> Integration (Tích hợp)."
   }
 ];
 
@@ -41,7 +41,6 @@ topics.forEach(t => {
       <div class="topic-num">${t.num}</div>
       <div style="flex:1">
         <div class="topic-name">${t.name}</div>
-        <div class="topic-en">${t.en}</div>
       </div>
       <div class="topic-chevron">▾</div>
     </div>

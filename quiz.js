@@ -3,104 +3,104 @@
 
 const quizData = [
     {
-        q: "Bạn có một định hướng cuộc đời (Mục tiêu/Đam mê) rất rõ ràng và hay nói về nó, nhưng lại không dành thời gian hay tiền bạc để rèn luyện. Trạng thái này gọi là gì?",
+        q: "Theo Edgar Schein, thành tố nào sau đây KHÔNG thuộc vào nhóm 'Biểu hiện quan sát được' của văn hóa doanh nghiệp?",
         options: [
-            { text: "Kẻ mộng mơ, lười biếng.", isCorrect: false },
-            { text: "Chỉ nói không làm (NATO).", isCorrect: true },
-            { text: "Người thiếu kỷ luật bản thân.", isCorrect: false },
-            { text: "Người có tư duy tích cực nhưng thiếu thực tế.", isCorrect: false }
+            { text: "Nghi lễ và lễ kỷ niệm.", isCorrect: false },
+            { text: "Các giả định ngầm định (Underlying Assumptions).", isCorrect: true },
+            { text: "Cách thức xưng hô và ngôn ngữ sử dụng.", isCorrect: false },
+            { text: "Kiến trúc và không gian làm việc.", isCorrect: false }
         ],
-        explanation: "Chỉ nói không làm (NATO - No Action Talk Only) – Trạng thái chỉ có Kim chỉ nam (Compass) mà thiếu Thời gian (Watch) và Nguồn lực (Dollar)."
+        explanation: "Các giả định ngầm định (Assumptions) nằm ở tầng sâu nhất, không thể quan sát trực tiếp. Artifacts là tầng bề mặt (trang phục, nghi lễ, hành vi xưng hô...)."
     },
     {
-        q: "Công thức thực tế nhất để tạo ra Giá trị (Value) không thể thay thế của một con người là gì?",
+        q: "Mục đích sâu nhất của việc triển khai 'Culture Dashboard' giúp ban lãnh đạo đạt được điều gì?",
         options: [
-            { text: "Thái độ + Kỹ năng + Kiến thức.", isCorrect: false },
-            { text: "Giá trị = Kim chỉ nam + Thời gian + Nguồn lực.", isCorrect: true },
-            { text: "Chỉ số thông minh + Chỉ số cảm xúc + May mắn.", isCorrect: false },
-            { text: "Nỗ lực x Sự thông minh.", isCorrect: false }
+            { text: "Kiểm soát giờ giấc và tác phong của nhân viên.", isCorrect: false },
+            { text: "Giám sát hiệu quả kinh doanh của từng phòng ban.", isCorrect: false },
+            { text: "Bắt đầu bằng đích đến và đo lường độ trưởng thành VHDL qua 4 cấp độ.", isCorrect: true },
+            { text: "Thay thế các khảo sát hài lòng nhân viên hằng năm.", isCorrect: false }
         ],
-        explanation: "Giá trị (Value) = Kim chỉ nam (Compass) + Thời gian (Watch) + Nguồn lực (Dollar). Định hướng đúng kết hợp với kỷ luật thời gian và tối ưu hóa nguồn lực."
+        explanation: "Culture Dashboard giúp tổ chức 'Bắt đầu bằng đích đến', đo lường độ trưởng thành từ Nhận thức đến Tích hợp."
     },
     {
-        q: "Khi đối mặt với một cơn giận hoặc một quyết định bốc đồng sắp xảy ra, phương pháp 'sơ cứu tâm lý' ngay lập tức là gì?",
+        q: "Trong quá trình xây dựng văn hóa, 'Phương pháp luận' (Methodology) sinh ra để trả lời cho câu hỏi cốt lõi nào?",
         options: [
-            { text: "Cố gắng kiềm chế, uống nước, đi chỗ khác.", isCorrect: false },
-            { text: "Tỉnh thức với công cụ SBA.", isCorrect: true },
-            { text: "Hít sâu 3 lần và nhắm mắt lại.", isCorrect: false },
-            { text: "Đếm từ 1 đến 10 để kiềm chế cơn giận.", isCorrect: false }
+            { text: "Tại sao chúng ta phải xây dựng văn hóa ngay bây giờ?", isCorrect: false },
+            { text: "Đích đến của Văn hóa Doanh nghiệp là gì?", isCorrect: false },
+            { text: "Làm thế nào để chúng ta tới được đích đến đã đặt ra?", isCorrect: true },
+            { text: "Ai là người chủ trì việc thực thi văn hóa?", isCorrect: false }
         ],
-        explanation: "Tỉnh thức (Mindfulness) với công cụ SBA: Stop (Dừng lại) - Breathe (Hít thở) - Ask (Tự hỏi mình một câu hỏi chất lượng)."
+        explanation: "Các 'Mô hình' trả lời cho câu hỏi Đích đến là gì, còn 'Phương pháp luận' là lời giải cho việc Làm thế nào để tới đích."
     },
     {
-        q: "Cảm giác thỏa mãn khi ăn một món ngon, lướt Tiktok hoặc chơi game giải trí thuộc nhóm hạnh phúc nào?",
+        q: "Một 'Thỏa thuận văn hóa' (Culture Pact) được xem là thành công khi được đúc kết từ thành tố nào?",
         options: [
-            { text: "Sở thích, niềm vui.", isCorrect: false },
-            { text: "Cấp độ 1 - Thú vui.", isCorrect: true },
-            { text: "Đam mê nhất thời.", isCorrect: false },
-            { text: "Sự thư giãn đơn thuần.", isCorrect: false }
+            { text: "Các quy định chế tài từ bộ phận Nhân sự.", isCorrect: false },
+            { text: "công thức Belief -Value-Behavior ( BVB)", isCorrect: true },
+            { text: "Bản tuyên từ mục tiêu của CEO.", isCorrect: false },
+            { text: "Giá trị cốt lõi trên website của công ty.", isCorrect: false }
         ],
-        explanation: "Cấp độ 1 - Thú vui (Pleasure). Những khoái cảm ngắn hạn cần nhận biết để không bị nghiện và nhầm lẫn với Hạnh phúc đích thực (Higher Purpose)."
+        explanation: "Culture Agreement hình thành từ việc thống nhất các trải nghiệm mong muốn và chuyển hóa chúng thành các Hành vi được chia sẻ/Hành vi cuối cùng."
     },
     {
-        q: "Để một nhân sự thực sự hạnh phúc và cống hiến hết mình tại nơi làm việc, sếp cần cung cấp 3 đòn bẩy tâm lý nào?",
+        q: "Mối liên kết logic giữa Giá trị cốt lõi (GTCL) và Khung năng lực được thể hiện qua phương trình nào?",
         options: [
-            { text: "Lương cao, sếp tâm lý, đồng nghiệp vui vẻ.", isCorrect: false },
-            { text: "Sự Tiến bộ, Quyền Tự chủ và Sự Kết nối.", isCorrect: true },
-            { text: "Môi trường làm việc chuyên nghiệp + Chế độ đãi ngộ tốt.", isCorrect: false },
-            { text: "Công việc ổn định + Cơ hội thăng tiến rõ ràng.", isCorrect: false }
+            { text: "Năng lực = GTCL + Kỹ năng chuyên môn.", isCorrect: false },
+            { text: "Năng lực = BVB + Kỹ năng chuyên môn + Kỹ năng Lãnh Đạo", isCorrect: true },
+            { text: "Giá trị = Năng lực lãnh đạo x Sự cam kết.", isCorrect: false },
+            { text: "GTCL = Hành động cá nhân + Kết quả tổ chức.", isCorrect: false }
         ],
-        explanation: "Gồm có: Sense of Progress (Thấy mình tiến bộ), Control (Có quyền kiểm soát/Tự chủ) và Connectedness (Sự kết nối ý nghĩa)."
+        explanation: "GTCL đóng vai trò là Năng lực cốt lõi (Core Competencies) trong Khung năng lực, được đo lường bằng hành vi thực hiện theo giá trị đó."
     },
     {
-        q: "Để rèn luyện thói quen Lạc quan một cách có hệ thống chứ không phải kiểu tích cực độc hại, bạn dùng công cụ nào?",
+        q: "Theo lộ trình 4 Cấp độ trưởng thành Văn hóa (Culture maturity), giai đoạn nào đánh dấu việc văn hóa không còn chỉ là kiến thức mà bắt đầu trở thành những hành động/thói quen lặp đi lặp lại?",
         options: [
-            { text: "Cứ cười lên thôi, nghĩ về những điều tốt đẹp.", isCorrect: false },
-            { text: "Mô hình ABCDE.", isCorrect: true },
-            { text: "Viết nhật ký biết ơn mỗi ngày.", isCorrect: false },
-            { text: "Tự ám thị những điều tích cực.", isCorrect: false }
+            { text: "Cấp độ 1: Nhận thức (Awareness).", isCorrect: false },
+            { text: "Cấp độ 2: Tri thức (Knowledge).", isCorrect: false },
+            { text: "Cấp độ 3: Hành động (Action).", isCorrect: false },
+            { text: "Cấp độ 4: Tích hợp ( Embedded into system)", isCorrect: true }
         ],
-        explanation: "Mô hình ABCDE: Phân tích Sự kiện (Adversity), Niềm tin (Belief), Hệ quả (Consequence), Tranh luận (Disputation) và Thôi thúc (Energization) để tái định hình tư duy logic."
+        explanation: "Cấp độ 3 (Action) là khi nhân viên bắt đầu thực hành các hành vi văn hóa một cách chủ động trước khi nó trở thành bản năng (Tích hợp)."
     },
     {
-        q: "Trạng thái bạn làm việc say mê đến mức quên cả thời gian và không cảm thấy mệt mỏi, năng suất tăng gấp nhiều lần được gọi là gì?",
+        q: "Trong '4 Đòn bẩy Thực thi' văn hóa, tại sao Lãnh đạo (Leadership) được coi là đòn bẩy quan trọng nhất?",
         options: [
-            { text: "Đang vào phom, làm việc năng suất.", isCorrect: false },
-            { text: "Trạng thái Dòng chảy (Flow).", isCorrect: true },
-            { text: "Làm việc bằng cả niềm đam mê.", isCorrect: false },
-            { text: "Sự tập trung tuyệt đối.", isCorrect: false }
+            { text: "Vì lãnh đạo là người nắm giữ ngân sách đào tạo.", isCorrect: false },
+            { text: "Vì lãnh đạo thiết lập chuẩn mực qua hành động làm gương (Role modeling).", isCorrect: true },
+            { text: "Vì lãnh đạo là người trực tiếp viết ra bộ giá định hướng.", isCorrect: false },
+            { text: "Vì chỉ có lãnh đạo mới có quyền kỷ luật nhân viên vi phạm.", isCorrect: false }
         ],
-        explanation: "Trạng thái Dòng chảy (Flow) hoặc rèn luyện qua các 'Dòng chảy nhỏ' (Microflow) hàng ngày."
+        explanation: "Lãnh đạo tạo ra 'Cái bóng' (Leadership Shadow) - hành động của họ là thông điệp mạnh nhất về những gì được chấp nhận trong tổ chức."
     },
     {
-        q: "Văn hóa nền tảng số 1 để một tập thể dám nói lên sự thật, dám sáng tạo và cống hiến là gì?",
+        q: "Điểm khác biệt lớn nhất của khóa học CultureCode 101 so với các khóa học quản trị văn hóa truyền thống là gì?",
         options: [
-            { text: "Môi trường thân thiện, văn hóa gia đình.", isCorrect: false },
-            { text: "Sự An toàn tâm lý.", isCorrect: true },
-            { text: "Hệ thống quản trị minh bạch.", isCorrect: false },
-            { text: "Sự tôn trọng và lắng nghe cấp dưới.", isCorrect: false }
+            { text: "Cung cấp nhiều trò chơi gắn kết (Team building).", isCorrect: false },
+            { text: "Tập trung vào việc viết lại Sứ mệnh và Tầm nhìn cho thật hay.", isCorrect: false },
+            { text: "Xây dựng hệ thống giải mã dựa trên dữ liệu và dashboard để đo lường.", isCorrect: true },
+            { text: "Chỉ tập trung vào việc đào tạo kỹ năng giao tiếp nội bộ.", isCorrect: false }
         ],
-        explanation: "An toàn tâm lý (Psychological Safety) – Đảm bảo nhân sự không sợ bị trừng phạt khi nêu ý kiến hay mắc sai lầm có tính toán."
+        explanation: "CC101 tập trung vào tính hệ thống, đo lường được và có thể 'giải mã' bằng dữ liệu thông qua Dashboard."
     },
     {
-        q: "Công cụ nào rẻ nhất nhưng hiệu quả nhất để xây dựng văn hóa Biết ơn trong một tổ chức?",
+        q: "Khi một tổ chức nói rằng họ có giá trị 'Chính trực', biểu hiện nào sau đây thực sự chứng minh giá trị đó đã trở thành 'Năng lực cốt lõi'?",
         options: [
-            { text: "Thưởng tiền nóng, tặng quà.", isCorrect: false },
-            { text: "Thẻ ghi nhận (WOW Cards).", isCorrect: true },
-            { text: "Bình chọn nhân viên xuất sắc nhất tháng.", isCorrect: false },
-            { text: "Tổ chức các buổi tiệc gắn kết đội ngũ.", isCorrect: false }
+            { text: "Chữ 'Chính trực' được dán khắp các bức tường công ty.", isCorrect: false },
+            { text: "Nhân viên thuộc lòng định nghĩa về sự chính trực.", isCorrect: false },
+            { text: "Các hành vi chính trực được định nghĩa rõ ràng và được dùng để đánh giá hiệu suất.", isCorrect: true },
+            { text: "Công ty tổ chức cuộc thi tìm hiểu về sự chính trực.", isCorrect: false }
         ],
-        explanation: "Thẻ ghi nhận (WOW Cards) – Những tấm thiệp/ghi nhận cụ thể, chân thành và kịp thời gửi đến đồng nghiệp."
+        explanation: "Văn hóa thực thụ là khi các giá trị được chuyển hóa thành các tiêu chuẩn hành vi (Shared Behaviors) và là thước đo năng lực nhân sự."
     },
     {
-        q: "Để phát triển năng lực của bản thân một cách bền vững theo thói quen Vị nhân, cách nhanh nhất là gì?",
+        q: "Triết lý 'Hành động từ Đích đến' (Start with the End) trong xây dựng văn hóa có nghĩa là gì?",
         options: [
-            { text: "Đi học thêm thật nhiều khóa học, đọc nhiều sách.", isCorrect: false },
-            { text: "Người đồng hành / Người dẫn dắt.", isCorrect: true },
-            { text: "Tự mày mò nghiên cứu và trải nghiệm thực tế.", isCorrect: false },
-            { text: "Thay đổi môi trường làm việc để học hỏi thêm.", isCorrect: false }
+            { text: "Xác định các kết quả kinh doanh trước khi làm văn hóa.", isCorrect: false },
+            { text: "Định rõ chân dung văn hóa mong muốn (Start with End in Mind) để thiết kế lộ trình chuyển đổi Culture by design.", isCorrect: true },
+            { text: "Hoàn thành mọi công việc rồi mới quay lại làm văn hóa.", isCorrect: false },
+            { text: "Chỉ tập trung vào những nhân viên sắp nghỉ việc.", isCorrect: false }
         ],
-        explanation: "Tìm kiếm Người đồng hành (Buddy) hoặc Người dẫn dắt (Mentor) để cùng chia sẻ, giúp đỡ hoặc được dẫn dắt."
+        explanation: "'Start with the End' giúp tổ chức có bức tranh rõ ràng về đích đến trước khi bắt tay vào thiết kế các đòn bẩy thực thi."
     }
 ];
 
@@ -145,7 +145,7 @@ function renderQuestion() {
         <div class="quiz-options">
             ${currentOptions.map((opt, idx) => `
                 <div class="quiz-option" onclick="handleAnswer(${idx}, ${opt.isCorrect})">
-                    <span style="font-weight:800; color:var(--warm-yellow); margin-right:12px; font-size:1.1rem">${labels[idx]}.</span>
+                    <span class="option-label">${labels[idx]}.</span>
                     ${opt.text}
                 </div>
             `).join('')}
