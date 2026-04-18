@@ -318,7 +318,7 @@ body {
   overflow: hidden;
   transition: max-height 0.35s ease;
   font-size: 0.92rem;
-  color: var(--mid);
+  color: #fafaf9; /* Fixed: Changed from var(--mid) to readable light color */
   padding: 0 1.4rem;
 }
 
