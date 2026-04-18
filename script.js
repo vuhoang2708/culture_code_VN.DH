@@ -44,7 +44,7 @@ topics.forEach(t => {
       </div>
       <div class="topic-chevron">▾</div>
     </div>
-    <div class="topic-body">${t.desc}</div>
+    <div class="topic-body" style="color: #ffffff !important;">${t.desc}</div>
   `;
   item.querySelector('.topic-header').addEventListener('click', () => {
     const isOpen = item.classList.contains('open');
