@@ -149,10 +149,10 @@ function sendUserConfirmation(data) {
     - Email: ${data.email}
     - Số điện thoại: ${data.phone}
 
-    ĐỂ GIỮ CHỖ CHÍNH THỨC, Bạn vui lòng hoàn tất chi phí hậu cần (300.000 VNĐ) - Bao gồm tài liệu, ăn trưa, teabreak & phí địa điểm:
+    ĐỂ GIỮ CHỖ CHÍNH THỨC, Bạn vui lòng hoàn tất chi phí hậu cần (300.000 VNĐ) - Bao gồm tài liệu, ăn trưa, teabreak:
 
-    1. Ngân hàng BIDV: 12310000494056 - Hà Ngọc Hoàn
-    2. Ngân hàng MB: 1910 - Công ty Cổ phần Tư vấn Quản trị HIPER
+    1. Ngân hàng BIDV (cá nhân, không cần xuất hoá đơn đỏ): 8815369431 - Hà Ngọc Hoàn
+    2. Ngân hàng MB (doanh nghiệp, cần xuất hoá đơn đỏ): 9600006868 - CONG TY TNHH HIPER CONSULTING
     
     NỘI DUNG CHUYỂN KHOẢN: CC02 - ${data.fullName} - ${data.phone}
 
@@ -174,4 +174,3 @@ function sendUserConfirmation(data) {
     Logger.log('Registrant email failed: ' + data.email);
   }
 }
-

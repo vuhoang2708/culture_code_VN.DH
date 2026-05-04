@@ -1,5 +1,5 @@
 // tracking.js - Hệ thống Analytics hợp nhất cho Dự án CultureCode 101
-const SHEET_WEBAPP_URL = window.CUSTOM_WEBAPP_URL || "https://script.google.com/macros/s/AKfycbzvt-RTibBnJpH_Z9r5sR1hOnaR6aXVwksSCLsfqIxl1ePRz5wF_-GTrhe2PTWxiufSHg/exec";
+const SHEET_WEBAPP_URL = window.CUSTOM_WEBAPP_URL || "https://script.google.com/macros/s/AKfycbyfMA9r-cMpv5ftS4CFGOtHzb8bc-oyAck7dvneQ_EY5lu82gvN90E_9iekq0AnMel1/exec";
 const sessionId = 'cc101-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5);
 
 window.sessionId = sessionId; // Export cho quiz.js dùng chung
